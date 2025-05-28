@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+<style>
+    body{
+        margin:0px;
+        padding:0px;
+        color:black;
+        box-sizing: border-box;
+        
+       
+       }
+
+       header{
+         display:flex;
+         padding:15px;
+         background-color: #fff;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         width:100%;
+         height:100%;
+         
+       }
+     .logo img{
+          width:100px;
+     }
+
+    
+
+     
+
+    .navbar ul{
+      display:flex;
+     
+    }
+
+    .navbar li{
+      list-style:none;
+      width:70px;
+      margin:30px 23px auto; 
+     
+      
+    }
+
+    .navbar li a{
+      text-decoration: none;
+      font-family: "Ubuntu", serif;
+      transition:all ease 0.8s;
+    }
+
+    .navbar li a:hover{
+      color:rgb(181, 29, 29)
+      
+    }
+
+    .container a{
+      position:absolute;
+      right:15%;
+      top:10%;
+      font-size:40px;
+      color:rgb(50, 90, 183)
+    }
+
+    .container a:hover{
+      color:rgb(187, 177, 177);
+      filter:invert(70%);
+      transition:all ease 0.8s;
+    }
+
+    .logo2 a{
+      position:absolute;
+      right:10%;
+      top:10%;
+      font-size:40px;
+      color:rgb(207, 36, 207)
+    }
+
+    .logo2 a:hover{
+      color:rgb(187, 177, 177);
+      filter:invert(70%);
+      transition:all ease 0.8s;
+    }
+
+    .logo3 a{
+      position:absolute;
+      right:5%;
+      top:10%;
+      font-size:40px;
+      color:rgb(29, 111, 233)
+    }
+
+    .logo3 a:hover{
+      color:rgb(93, 90, 90);
+      filter:invert(70%);
+      transition:all ease 0.8s;
+    }
+
+    .page{
+       height:600px;
+       overflow: hidden;
+       position: relative;
+
+    }
+
+    .page img{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      z-index:-1;
+      
+    }
+
+    .page-content{
+      position:absolute;
+      top:50%;
+      left:30%;
+      text-align:center;
+      
+    }
+
+    .page-content h1{
+      font-family: "Ubuntu", serif;
+      font-size: 50px;     
+    }
+
+    .page-content p{
+      font-family: "Ubuntu", serif;
+      font-size: 20px;
+      margin-top: -20px;
+    }
+
+    .page-btn{
+      color:white;
+      text-decoration: none;
+      background-color: rgb(116, 80, 54);
+      padding:15px 20px;
+      border-radius: 50px;
+      position:absolute;
+      left:40%;
+      top:150%;
+      display: inline-block;
+      font-family: "Ubuntu", serif;
+      font-size: 18px;
+      transition:all ease 0.8s;
+
+    }
+
+    .page-btn:hover{
+      background-color:rgb(111, 208, 240)
+    }
+
+    .destination{
+      font-size: 15px;
+      margin-bottom: 40px;
+      font-family: "Ubuntu", serif;
+      margin-right: 80px;
+      margin-left: 80px;
+      text-align: center;
+      
+    }
+
+    .destination-grid{
+      display:grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-gap:40px;
+    }
+    
+    .destination-item img{
+      width:90%;
+      height:300px;
+      object-fit: cover;
+    }
+
+    .destination-item{
+      text-align: left;
+      font-size:20px;
+    }
+
+    .destination-item p{
+      font-size:15px;
+      font-family:"Ubuntu", serif;
+    }
+
+    .destination h2{
+      margin:40px 40px;
+      
+    }
+
+    
+
+    #des-1{
+      text-decoration: none;
+      font-family:"Ubuntu", serif;
+      font-size: 15px;
+      background-color: #f0e3e3;
+      padding: 5px 10px;
+      border-radius: 40px;
+      position:absolute;
+      left:180px;
+      top:205%;
+      transition:all ease 0.8s;
+    }
+
+    #des-1:hover{
+      color:rgb(92, 42, 6);
+    }
+
+    #des-2{
+      text-decoration: none;
+      font-family:"Ubuntu", serif;
+      font-size: 15px;
+      background-color: #f0e3e3;
+      padding: 5px 10px;
+      border-radius: 40px;
+      position:absolute;
+      top:205%;
+      left:45%;
+      transition:all ease 0.8s;
+    }
+
+    #des-2:hover{
+      color:rgb(92, 42, 6);
+    }
+
+    #des-3{
+      text-decoration: none;
+      font-family:"Ubuntu", serif;
+      font-size: 15px;
+      background-color: #f0e3e3;
+      padding: 5px 10px;
+      border-radius: 40px;
+      position:absolute;
+      top:205%;
+      right:18%;
+      transition:all ease 0.8s;
+    }
+
+    #des-3:hover{
+      color:rgb(92, 42, 6);
+    }
+
+    #des-4{
+      text-decoration: none;
+      font-family:"Ubuntu", serif;
+      font-size: 15px;
+      background-color: #f0e3e3;
+      padding: 5px 10px;
+      border-radius: 40px;
+      position:absolute;
+      top:288%;
+      left:15%;
+      transition:all ease 0.8s;
+    }
+
+    #des-4:hover{
+      color:rgb(92, 42, 6);
+    }
+
+    #des-5{
+      text-decoration: none;
+      font-family:"Ubuntu", serif;
+      font-size: 15px;
+      background-color: #f0e3e3;
+      padding: 5px 10px;
+      border-radius: 40px;
+      position:absolute;
+      top:288%;
+      left:45%;
+      transition:all ease 0.8s;
+    }
+
+    #des-5:hover{
+      color:rgb(92, 42, 6);
+    }
+
+    #des-6{
+      text-decoration: none;
+      font-family:"Ubuntu", serif;
+      font-size: 15px;
+      background-color: #f0e3e3;
+      padding: 5px 10px;
+      border-radius: 40px;
+      position:absolute;
+      top:288%;
+      right:18%;
+      transition:all ease 0.8s;
+    }
+
+    #des-6:hover{
+      color:rgb(92, 42, 6);
+    }
+
+    .about{
+      text-align: center;
+      font-size: 18px;
+      font-family:"Ubuntu", serif;
+
+    }
+
+    .about p{
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .testimonals1{
+      font-size: 15px;
+      margin-bottom: 40px;
+      font-family: "Ubuntu", serif;
+      margin-right: 80px;
+      margin-left: 80px;
+      text-align: center;
+      
+    }
+
+    
+      
+    
+
+
+
+   
+   </style>
+<body>
+    <header>
+      <header>
+         <div class="logo">
+            <img src="images/plane2.jpg" alt="travel world">
+           
+         </div>
+
+             <nav class="navbar">
+             <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Packages</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="Register-btn">Register</a></li>
+             </ul>
+    
+            </nav>
+            
+            <div class="container">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+             
+            </div>
+
+            <div class="logo2">
+             <a href="#"> <i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <div class="logo3">
+             <a href="#"><i class="fa-brands fa-telegram"></i></a> 
+            </div>
+          
+          </header>
+
+        </header>
+
+          <main>
+            <section class="page">
+              <img src="images/pic1.jpg" alt="pic1">
+            </section>
+
+            <div class="page-content">
+              <h1>Travel & Explore the World</h1>
+              <p>Better to see something once than hear about it a thousand times!</p>
+              <a href="#" class="page-btn">Book My Tour</a>
+            </div>
+
+            <section class="destination">
+              <h2>Popular Destinations</h2>
+              <div class="destination-grid">
+                <div class="destination-item">
+                  <img src="images/paris.jpg">
+                  <h3>Paris City</h3>
+                  <p>Visit Paris which is the City of Light, of love, of beauty, of romance and of hope over fear, gratitude over cynicism and light over darkness.</p>
+                  
+                </div>
+
+                <div class="destination-item">
+                  <img src="images/maldives.jpg">
+                  <h3>Maldives City</h3>
+                  <p>Visit Maldives which is famous for its exciting water activities. If you are an adventure enthusiast, the variety of water sports will make you want to stay here forever.</p>
+                  
+                </div>
+
+                <div class="destination-item">
+                  <img src="images/malaysia.jpg">
+                  <h3>Malaysia City</h3>
+                  <p>Visit Malaysia which is a fascinating destination that offers a rich tapestry of cultural, historical, and natural attractions. From the bustling streets of Kuala Lumpur to the serene beaches of Langkawi</p>
+                  
+                </div>
+                
+              </div>
+            </section>
+
+            <section class="destination">
+              
+              <div class="destination-grid">
+                <div class="destination-item">
+                  <img src="images/dubai.jpg">
+                  <h3>Dubai City</h3>
+                  <p>Dubai is a city of skyscrapers, ports, and beaches, where big business takes place alongside sun-seeking tourism.Dubai is a magical, multicultural melting pot</p>
+                  
+                </div>
+
+                <div class="destination-item">
+                  <img src="images/london.jpg">
+                  <h3>London City</h3>
+                  <p>London is the capital city of the United Kingdom.  The city has the most museums, art galleries, libraries, and cultural venues in the UK, including the British Museum, National Gallery, Natural History Museum, Tate Modern, British Library, and numerous West End theatres.</p>
+                  
+                </div>
+
+                <div class="destination-item">
+                  <img src="images/singapore.jpg">
+                  <h3>Singapore City</h3>
+                  <p>Singapore is one of the safest cities on earth. it is popularly known for being a global financial centre and is home to the most amazing world heritage sites, world-class airport with a waterfall view, luxurious malls, and wonderful tourist destinations. </p>
+                  
+                </div>
+                
+              </div>
+            </section>
+
+            <section class="destination">
+              <h2>Hotels</h2>
+              <div class="destination-grid">
+                <div class="destination-item">
+                  <img src="images/hotel1.jpg">
+                  
+                </div>
+
+                <div class="destination-item">
+                  <img src="images/hotel2.jpg">
+                  
+                </div>
+
+                <div class="destination-item">
+                  <img src="images/hotel3.jpg">
+                  
+                </div>
+                </div>
+            </section>
+
+            <section class="testimonals1">
+              <div class="testimonals-grid1">
+                <div class="testimonals-item1">
+              <h2>Our Services</h2>
+              <h3>We Offer Following Services</h3>
+              <h4>Air Ticketing</h4>
+              <i class="fa-solid fa-plane"></i>
+              <p>Collect Your Tickets <br>and Explore this Exciting World </p>
+              </div>
+            </div>  
+            </div>
+
+            
+              <h4>Cruises</h4>
+              <i class="fa-solid fa-ship"></i>
+                  
+              <p>Let see the amazing views from cruise<br> you'll fall in love with the ease of visiting multiple places <br>without unpacking and coming home each day to entertainment, dinner, and drinks.</p>
+                  
+            </div>
+
+            
+              <h4>Tour Packages</h4>
+              <i class="fa-solid fa-location-dot"></i>
+                  
+              <p>Explore, Discover, Experience," "Unforgettable Journeys," <br>or "Your Dream Getaway Starts Here" to entice potential <br>travelers with affordable Prices and services</p>
+
+              </section>
+                  
+            </div>
+            
+            
+
+          </main>
+       
+       
+        
+        
+</body>
+</html>
